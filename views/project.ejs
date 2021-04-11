@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-x: hidden;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Galdeano&display=swap" rel="stylesheet">
+ 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <link rel="stylesheet" href="/public/assets/project.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="/public/assets/chatbot.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- This is  start of the navbar -->
+    <nav class="topnav"  >
+        <ul>
+          <li style="float:left"><a id="title" href="/">Alute Logo</a></li>
+          
+          <%  if(!user){%>
+          <li><a class="alig" href="/#contact">Go to your account</a></li>
+          <%  }else{ %>
+              <li> <a href="/userprofile"><img src="/<%= user.img.path %>" alt=""></a></li>
+              <li><a class="alig" href="/logout">Logout</a></li>
+       
+        
+          <%  } %>
+          <li><a class="alig" href="/shop">Spend credits</a></li>
+          
+          <li><a class="alig" href="/#explore">Explore</a></li>           
+          <li><a class="alig" href="/about">About</a></li>
+          <li><a class="alig" href="/projects">Dashboard</a></li>
+          <li><a class="alig" href="/">Home</a></li>
+      </ul>
+    </nav>
+    <!-- navbar end -->
+
+      <div class="row box text-center">
+         <div class="col-md-2"></div>
+         <div class="col-md-8">
+          <p>Apply for Different projects and enhance your development skills</p>
+           <a class="create" href="/projects/new">Create a Project</a>
+         </div>
+         <div class="col-md-2"></div>
+      </div>
+      
+
+
+      <div class="row">
+
+          <% projects.forEach(function(project){%>
+       <a class="link" href="/projects/<%=project._id%>">
+        <div class="col-md-3">
+         <div class="card">
+            <h2><b><%=project.title.substring(0,30)%></b></h2>
+            <h5><%=project.descrip.substring(0,80)%>... </h5>
+            <h4><strong>Skills Required: <%=project.skills.substring(0,50)%> </strong></h4>
+            
+            <p style="font-size: 1.8rem"> <a href="/userprofile/<%=project.owner.id%>">Created by <%=project.owner.username%></a></p>
+            <p>Max:<%=project.max%> <span class="want">Want:<%=project.need%></span></p>
+        
+          </div>
+        </div></a>
+        <% });%>
+        
+
+    </div>
+      <!-- Project dashbord ended -->
+
+
+
+      <!-- footer start -->
+      <div class="footer">
+        <p>Copyright &#169; 2021 Alute</p>
+    </div>
+    <!-- footer ended -->
+
+
+
+   
+    
+</body>
+</html>
