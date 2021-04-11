@@ -61,10 +61,10 @@ With a structured way to work and incentives provided to users to complete their
 
 ## Future Aspects
 
-*Better and more efficient platform
-*App for the same for easier track of features
-*Better resources, collaborations and connections
-*Additional features such as Plagiarism Checker, Analysis of level of projects, all powered by AI 
+* Better and more efficient platform
+* App for the same for easier track of features
+* Better resources, collaborations and connections
+* Additional features such as Plagiarism Checker, Analysis of level of projects, all powered by AI 
 
 ## Instructions to Install and Setup:
 For using this project:
