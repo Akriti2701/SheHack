@@ -9,8 +9,6 @@
 - [Srishti Lodha]
 - [Akriti Lodha]
 
-## Tracks Chosen - OPEN INNOVATION,EDUCATION and AI
-
 ## Problem Statement
 
 During the pandemic era, everyone is at courtesy of social help and this requires a large number of contributions from people. 
