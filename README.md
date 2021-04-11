@@ -9,6 +9,11 @@
 - [Srishti Lodha]
 - [Akriti Lodha]
 
+## Track: Social Good
+
+-Education
+-Social Contributions
+
 ## Problem Statement
 
 During the pandemic era, everyone is at courtesy of social help and this requires a large number of contributions from people. 
